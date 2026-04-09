@@ -1,8 +1,8 @@
 import math
 class Point:
     def __init__(self, x=0.0, y=0.0):
-        self.x = x
-        self.y = y
+        self.x=x
+        self.y=y
 class Circle:
     def __init__(self, center: Point, r: float):
         self.center=center
@@ -15,10 +15,8 @@ class Rectangle:
 def distance(p1: Point, p2: Point) -> float:
     return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
 def point_in_circle(circle: Circle, point: Point) -> bool:
-    """True nếu điểm nằm trong hoặc trên vòng tròn."""
     return distance(circle.center, point) <= circle.radius
 def rect_in_circle(circle: Circle, rect: Rectangle) -> bool:
-    """True nếu HCN nằm hoàn toàn trong/trên vòng tròn."""
     c = rect.corner
     corners = [
         Point(c.x,              c.y),
@@ -28,7 +26,6 @@ def rect_in_circle(circle: Circle, rect: Rectangle) -> bool:
     ]
     return all(point_in_circle(circle, p) for p in corners)
 def rect_circle_overlap(circle: Circle, rect: Rectangle) -> bool:
-    """True nếu bất kỳ góc nào của HCN nằm trong vòng tròn."""
     c = rect.corner
     corners = [
         Point(c.x,              c.y),
