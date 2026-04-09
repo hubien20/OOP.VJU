@@ -1,8 +1,8 @@
 import math
 class Point:
     def __init__(self, x: int, y: int):
-        self.x = x
-        self.y = y
+        self.x=x
+        self.y=y
 
     def hien_thi(self):
         print(f"Điểm ({self.x}, {self.y})")
