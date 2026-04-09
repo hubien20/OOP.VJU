@@ -31,14 +31,14 @@ class NhanVien:
     def inTTin(self):
         luong = self.tinhLuong()
         print(f"""
-╔══════════════════════════════════════╗
-║        THÔNG TIN NHÂN VIÊN           ║
-╠══════════════════════════════════════╣
-║ Tên       : {self.__tenNhanVien:<25}║
-║ Lương CB  : {self.__luongCoBan:>20,.0f} VNĐ ║
-║ Hệ số     : {self.__heSoLuong:>25.1f}║
-║ Lương TT  : {luong:>20,.0f} VNĐ ║
-╚══════════════════════════════════════╝""")
+══════════════════════════════════════
+        THÔNG TIN NHÂN VIÊN           
+══════════════════════════════════════
+ Tên       : {self.__tenNhanVien:<25}
+ Lương CB  : {self.__luongCoBan:>20,.0f} VNĐ 
+ Hệ số     : {self.__heSoLuong:>25.1f}
+ Lương TT  : {luong:>20,.0f} VNĐ 
+══════════════════════════════════════""")
     def tangLuong(self, delta: float) -> bool:
         luong_moi = (self.__luongCoBan + delta) * self.__heSoLuong
         if luong_moi > NhanVien.LUONG_MAX:
