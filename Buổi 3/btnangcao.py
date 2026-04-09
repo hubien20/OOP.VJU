@@ -5,23 +5,17 @@ class NhanVien:
         self.__tenNhanVien  = ten_nhan_vien
         self.__luongCoBan   = luong_co_ban
         self.__heSoLuong    = he_so_luong
-    @property
     def tenNhanVien(self): return self.__tenNhanVien
-    @tenNhanVien.setter
     def tenNhanVien(self, value):
         if not value.strip():
             raise ValueError("Tên không được rỗng!")
         self.__tenNhanVien = value
-    @property
     def luongCoBan(self): return self.__luongCoBan
-    @luongCoBan.setter
     def luongCoBan(self, value):
         if value < 0:
             raise ValueError("Lương không được âm!")
         self.__luongCoBan = value
-    @property
     def heSoLuong(self): return self.__heSoLuong
-    @heSoLuong.setter
     def heSoLuong(self, value):
         if value <= 0:
             raise ValueError("Hệ số lương phải > 0!")
