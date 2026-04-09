@@ -1,9 +1,9 @@
 class NhanVien:
     Luong_Max = 50_000_000
     def __init__(self, ten_nhan_vien, luong_co_ban, he_so_luong):
-        self.__tenNhanVien  = ten_nhan_vien
-        self.__luongCoBan   = luong_co_ban
-        self.__heSoLuong    = he_so_luong
+        self.__tenNhanVien=ten_nhan_vien
+        self.__luongCoBan=luong_co_ban
+        self.__heSoLuong=he_so_luong
     def getTenNhanVien(self):
         return self.__tenNhanVien
     def getLuongCoBan(self):
@@ -16,12 +16,12 @@ class NhanVien:
         if value < 0:
             print ("Lương không được âm")
             return 
-            self.__luongCoBan = value
+            self.__luongCoBan=value
     def setHeSoLuong(self, value):
         if value <= 0:
             print ("Hệ số lương phải > 0")
             return
-            self.__heSoLuong = value
+            self.__heSoLuong=value
     def tinhLuong(self):
         return self.__luongCoBan * self.__heSoLuong
     def inTTin(self):
